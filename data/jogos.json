@@ -1,0 +1,37 @@
+[
+  { "id": "G01", "fase": "grupos", "turno": 1, "grupo": "A", "data": "2027-01-05", "hora": "19:30", "casa": "E1", "fora": "E2", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G02", "fase": "grupos", "turno": 1, "grupo": "B", "data": "2027-01-05", "hora": "20:30", "casa": "E4", "fora": "E5", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G03", "fase": "grupos", "turno": 1, "grupo": "C", "data": "2027-01-07", "hora": "19:30", "casa": "E7", "fora": "E8", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G04", "fase": "grupos", "turno": 1, "grupo": "D", "data": "2027-01-07", "hora": "20:30", "casa": "E10", "fora": "E11", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G05", "fase": "grupos", "turno": 1, "grupo": "A", "data": "2027-01-08", "hora": "19:30", "casa": "E3", "fora": "E2", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G06", "fase": "grupos", "turno": 1, "grupo": "B", "data": "2027-01-08", "hora": "20:30", "casa": "E6", "fora": "E4", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G07", "fase": "grupos", "turno": 1, "grupo": "C", "data": "2027-01-12", "hora": "19:30", "casa": "E9", "fora": "E7", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G08", "fase": "grupos", "turno": 1, "grupo": "D", "data": "2027-01-12", "hora": "20:30", "casa": "E12", "fora": "E10", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G09", "fase": "grupos", "turno": 1, "grupo": "A", "data": "2027-01-14", "hora": "19:30", "casa": "E3", "fora": "E1", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G10", "fase": "grupos", "turno": 1, "grupo": "B", "data": "2027-01-14", "hora": "20:30", "casa": "E6", "fora": "E5", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G11", "fase": "grupos", "turno": 1, "grupo": "C", "data": "2027-01-15", "hora": "19:30", "casa": "E9", "fora": "E8", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G12", "fase": "grupos", "turno": 1, "grupo": "D", "data": "2027-01-15", "hora": "20:30", "casa": "E12", "fora": "E11", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+
+  { "id": "G13", "fase": "grupos", "turno": 2, "grupo": "A", "data": "2027-01-19", "hora": "19:30", "casa": "E1", "fora": "E2", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G14", "fase": "grupos", "turno": 2, "grupo": "B", "data": "2027-01-19", "hora": "20:30", "casa": "E4", "fora": "E5", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G15", "fase": "grupos", "turno": 2, "grupo": "C", "data": "2027-01-21", "hora": "19:30", "casa": "E7", "fora": "E8", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G16", "fase": "grupos", "turno": 2, "grupo": "D", "data": "2027-01-21", "hora": "20:30", "casa": "E10", "fora": "E11", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G17", "fase": "grupos", "turno": 2, "grupo": "A", "data": "2027-01-22", "hora": "19:30", "casa": "E3", "fora": "E2", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G18", "fase": "grupos", "turno": 2, "grupo": "B", "data": "2027-01-22", "hora": "20:30", "casa": "E6", "fora": "E4", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G19", "fase": "grupos", "turno": 2, "grupo": "C", "data": "2027-01-26", "hora": "19:30", "casa": "E9", "fora": "E7", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G20", "fase": "grupos", "turno": 2, "grupo": "D", "data": "2027-01-26", "hora": "20:30", "casa": "E12", "fora": "E10", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G21", "fase": "grupos", "turno": 2, "grupo": "A", "data": "2027-01-28", "hora": "19:30", "casa": "E3", "fora": "E1", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G22", "fase": "grupos", "turno": 2, "grupo": "B", "data": "2027-01-28", "hora": "20:30", "casa": "E6", "fora": "E5", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G23", "fase": "grupos", "turno": 2, "grupo": "C", "data": "2027-01-29", "hora": "19:30", "casa": "E9", "fora": "E8", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+  { "id": "G24", "fase": "grupos", "turno": 2, "grupo": "D", "data": "2027-01-29", "hora": "20:30", "casa": "E12", "fora": "E11", "golsCasa": null, "golsFora": null, "status": "agendado", "gols": [] },
+
+  { "id": "Q1", "fase": "quartas", "rotulo": "Quartas · Jogo 1", "data": "2027-02-02", "hora": "19:30", "casa": "1A", "fora": "2B", "golsCasa": null, "golsFora": null, "penaltisCasa": null, "penaltisFora": null, "status": "agendado", "gols": [] },
+  { "id": "Q2", "fase": "quartas", "rotulo": "Quartas · Jogo 2", "data": "2027-02-02", "hora": "20:30", "casa": "1B", "fora": "2A", "golsCasa": null, "golsFora": null, "penaltisCasa": null, "penaltisFora": null, "status": "agendado", "gols": [] },
+  { "id": "Q3", "fase": "quartas", "rotulo": "Quartas · Jogo 3", "data": "2027-02-04", "hora": "19:30", "casa": "1C", "fora": "2D", "golsCasa": null, "golsFora": null, "penaltisCasa": null, "penaltisFora": null, "status": "agendado", "gols": [] },
+  { "id": "Q4", "fase": "quartas", "rotulo": "Quartas · Jogo 4", "data": "2027-02-04", "hora": "20:30", "casa": "1D", "fora": "2C", "golsCasa": null, "golsFora": null, "penaltisCasa": null, "penaltisFora": null, "status": "agendado", "gols": [] },
+
+  { "id": "S1", "fase": "semi", "rotulo": "Semifinal 1", "data": "2027-02-09", "hora": "19:30", "casa": "VQ1", "fora": "VQ4", "golsCasa": null, "golsFora": null, "penaltisCasa": null, "penaltisFora": null, "status": "agendado", "gols": [] },
+  { "id": "S2", "fase": "semi", "rotulo": "Semifinal 2", "data": "2027-02-09", "hora": "20:30", "casa": "VQ3", "fora": "VQ2", "golsCasa": null, "golsFora": null, "penaltisCasa": null, "penaltisFora": null, "status": "agendado", "gols": [] },
+
+  { "id": "F", "fase": "final", "rotulo": "Grande Final", "data": "2027-02-12", "hora": "19:30", "casa": "VS1", "fora": "VS2", "golsCasa": null, "golsFora": null, "penaltisCasa": null, "penaltisFora": null, "status": "agendado", "gols": [] }
+]

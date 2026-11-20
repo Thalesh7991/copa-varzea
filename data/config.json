@@ -1,0 +1,32 @@
+{
+  "nome": "Copa Várzea",
+  "edicao": 2027,
+  "modalidade": "Futsal",
+  "organizador": "Várzea Botucatu",
+  "cidade": "Botucatu",
+  "estado": "SP",
+  "local": null,
+  "inicio": "2027-01-05T19:30:00-03:00",
+  "grupos": {
+    "A": [1, 2, 3],
+    "B": [4, 5, 6],
+    "C": [7, 8, 9],
+    "D": [10, 11, 12]
+  },
+  "classificadosPorGrupo": 2,
+  "pontuacao": { "vitoria": 3, "empate": 1, "derrota": 0 },
+  "criteriosDesempate": [
+    "Pontos",
+    "Número de vitórias",
+    "Saldo de gols",
+    "Gols marcados",
+    "Confronto direto",
+    "Sorteio"
+  ],
+  "fases": [
+    { "id": "grupos", "nome": "Fase de grupos", "periodo": "05 a 29 de janeiro", "descricao": "4 grupos de 3 equipes em turno e returno. Os 2 melhores de cada grupo avançam." },
+    { "id": "quartas", "nome": "Quartas de final", "periodo": "02 e 04 de fevereiro", "descricao": "Cruzamento olímpico entre os grupos: 1º de um contra o 2º do outro." },
+    { "id": "semi", "nome": "Semifinal", "periodo": "09 de fevereiro", "descricao": "Os quatro sobreviventes disputam as vagas na decisão." },
+    { "id": "final", "nome": "Grande final", "periodo": "12 de fevereiro", "descricao": "Uma noite, um jogo, uma taça." }
+  ]
+}
