@@ -1,10 +1,10 @@
 [
   { "id": "abdulas", "nome": "Abdulas FC", "sigla": "ABD", "escudo": "/images/times/abdulas.webp", "cor": "#f6c90e" },
   { "id": "adega-do-galo", "nome": "Adega do Galo", "sigla": "ADG", "escudo": "/images/times/adega-do-galo.webp", "cor": "#e3262f" },
-  { "id": "cabare", "nome": "Cabaré", "sigla": "CAB", "escudo": "/images/times/cabare.webp", "cor": "#2f6bff" },
   { "id": "cuesta", "nome": "Cuesta FC", "sigla": "CUE", "escudo": "/images/times/cuesta.webp", "cor": "#4a9be8" },
   { "id": "inimigos-do-fim", "nome": "Inimigos do Fim FC", "sigla": "IDF", "escudo": "/images/times/inimigos-do-fim.webp", "cor": "#ec5fae" },
   { "id": "maestro", "nome": "Maestro Futsal", "sigla": "MAE", "escudo": "/images/times/maestro.webp", "cor": "#9cc79a" },
+  { "id": "marajoara", "nome": "Marajoara", "sigla": "MAR", "escudo": "/images/times/marajoara.webp", "cor": "#d4111c" },
   { "id": "phenix", "nome": "Phenix FC", "sigla": "PHX", "escudo": "/images/times/phenix.webp", "cor": "#ff6a1a" },
   { "id": "pitaco", "nome": "Pitaco FC", "sigla": "PIT", "escudo": "/images/times/pitaco.webp", "cor": "#e0312b" },
   { "id": "real-quebrada", "nome": "Real Quebrada", "sigla": "RQB", "escudo": "/images/times/real-quebrada.webp", "cor": "#f2b705" },

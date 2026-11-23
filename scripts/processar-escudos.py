@@ -22,14 +22,63 @@ MAP = {
     "WhatsApp Image 2026-11-19 at 16.37.24.jpeg": "abdulas",
     "WhatsApp Image 2026-11-19 at 16.37.24 (1).jpeg": "republica",
     "WhatsApp Image 2026-11-19 at 16.37.24 (2).jpeg": "so-tapa",
-    "WhatsApp Image 2026-11-19 at 16.37.24 (3).jpeg": "cabare",
+    "marajoara.jpeg": "marajoara",
     "logo_copa_varzea.jpeg": "_logo",
 }
 
 SIZE = 512
 CLOSE = {"republica": 0.03}
+# Escudos com fundo em degradê vertical (cor varia só por linha) e contorno preto
+DEGRADE = {"marajoara"}
 DARK_T = 42
 WHITE_T = 232
+
+
+def salvar(im: Image.Image, name: str, bbox):
+    x0, y0, x1, y1 = bbox
+    im = im.crop((x0, y0, x1 + 1, y1 + 1))
+    w, h = im.size
+    side = int(max(w, h) * 1.04)
+    canvas = Image.new("RGBA", (side, side), (0, 0, 0, 0))
+    canvas.paste(im, ((side - w) // 2, (side - h) // 2))
+    out_size = 480 if name == "_logo" else SIZE
+    canvas = canvas.resize((out_size, out_size), Image.LANCZOS)
+
+    target = OUT / ("logo-copa-varzea.webp" if name == "_logo" else f"{name}.webp")
+    canvas.save(target, "WEBP", quality=90, method=6)
+    if name == "_logo":
+        canvas.save(OUT / "logo-copa-varzea.png", "PNG", optimize=True)
+    print(f"{target.name:28s} {target.stat().st_size // 1024} KB  (crop {w}x{h})")
+
+
+def process_degrade(path: Path, name: str, tol: float = 70):
+    """Fundo em degradê: estima a cor de fundo de cada linha e inunda a partir das bordas até o contorno preto."""
+    rgb = np.asarray(Image.open(path).convert("RGB")).astype(np.float32)
+    H, W, _ = rgb.shape
+    cols = np.r_[int(W * 0.08):int(W * 0.18), int(W * 0.82):int(W * 0.92)]
+    bgc = np.median(rgb[:, cols, :], axis=1)[:, None, :]
+    dist = np.sqrt(((rgb - bgc) ** 2).sum(axis=2))
+
+    labels, _ = ndimage.label(dist < tol)
+    border = np.unique(np.concatenate([labels[0], labels[-1], labels[:, 0], labels[:, -1]]))
+    bg = np.isin(labels, border[border != 0])
+
+    # Só o maior bloco (o escudo); descarta pedaços de outras artes nas bordas
+    fl, n = ndimage.label(~bg)
+    sizes = ndimage.sum(~bg, fl, range(1, n + 1))
+    fg = ndimage.binary_fill_holes(fl == (np.argmax(sizes) + 1))
+
+    # Borda suave: o pixel de transição é mistura de contorno preto com o fundo -> alfa = 1 - projeção no fundo
+    band = ndimage.binary_dilation(fg, iterations=3) & ~fg
+    proj = ((rgb * bgc).sum(axis=2) / (bgc * bgc).sum(axis=2)).clip(0, 1)
+    alpha = np.where(fg, 1.0, 0.0)
+    alpha[band] = 1 - proj[band]
+    alpha[band & (dist < 18)] = 0
+    rgb[band] = 0
+
+    rgba = np.dstack([rgb.astype(np.uint8), (alpha * 255).round().astype(np.uint8)])
+    ys, xs = np.where(alpha > 0.1)
+    salvar(Image.fromarray(rgba, "RGBA"), name, (xs.min(), ys.min(), xs.max(), ys.max()))
 
 
 def process(path: Path, name: str):
@@ -71,22 +120,12 @@ def process(path: Path, name: str):
     im = Image.fromarray(rgba, "RGBA")
 
     ys, xs = np.where(alpha > 24)
-    x0, x1, y0, y1 = xs.min(), xs.max(), ys.min(), ys.max()
-    im = im.crop((x0, y0, x1 + 1, y1 + 1))
-
-    w, h = im.size
-    side = int(max(w, h) * 1.04)
-    canvas = Image.new("RGBA", (side, side), (0, 0, 0, 0))
-    canvas.paste(im, ((side - w) // 2, (side - h) // 2))
-    out_size = 480 if name == "_logo" else SIZE
-    canvas = canvas.resize((out_size, out_size), Image.LANCZOS)
-
-    target = OUT / ("logo-copa-varzea.webp" if name == "_logo" else f"{name}.webp")
-    canvas.save(target, "WEBP", quality=90, method=6)
-    if name == "_logo":
-        canvas.save(OUT / "logo-copa-varzea.png", "PNG", optimize=True)
-    print(f"{target.name:28s} {target.stat().st_size // 1024} KB  (crop {w}x{h})")
+    salvar(im, name, (xs.min(), ys.min(), xs.max(), ys.max()))
 
 
+# Uso: python processar-escudos.py <origem> <destino> [id ...]  (sem ids processa todos)
+somente = set(sys.argv[3:])
 for fname, name in MAP.items():
-    process(SRC / fname, name)
+    if somente and name not in somente:
+        continue
+    (process_degrade if name in DEGRADE else process)(SRC / fname, name)

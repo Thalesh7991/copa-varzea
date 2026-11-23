@@ -16,7 +16,7 @@ Diga qual time ocupa cada número da tabela ("Equipe 1" a "Equipe 12") e marque 
 {
   "realizado": true,
   "data": "2026-12-10",
-  "equipes": { "1": "phenix", "2": "cabare", "3": "pitaco", "...": "..." }
+  "equipes": { "1": "phenix", "2": "marajoara", "3": "pitaco", "...": "..." }
 }
 ```
 
